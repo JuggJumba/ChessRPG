@@ -12,7 +12,7 @@ namespace ChessLogic
         public override Player Colour { get; }
         public Knight(Player colour) 
         {
-            Colour = Colour;
+            Colour = colour;
         }
 
         public override Piece Copy()
