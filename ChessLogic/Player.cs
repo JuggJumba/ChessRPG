@@ -9,12 +9,12 @@
 
     public static class PlayerExtensions
     {
-        public static Player Opponnent(this Player player)
+        public static Player Opponent(this Player player)
         {
             return player switch
             {
                 Player.White => Player.Black,
-                Player.Black => Player.White,
+                Player.Black => Player.Black,
                 _ => Player.None,
             };
         }

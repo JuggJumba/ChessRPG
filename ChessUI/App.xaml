@@ -4,6 +4,36 @@
              xmlns:local="clr-namespace:ChessUI"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="StrokeColour">#9f82b6</SolidColorBrush> 
+        <SolidColorBrush x:Key="FillColour">#0c6f1c</SolidColorBrush>
+        <SolidColorBrush x:Key="TextColour">#000</SolidColorBrush>
+        <SolidColorBrush x:Key="ButtonColour">#a233ff</SolidColorBrush>
+
+        <Style TargetType="Border" x:Key ="BorderStyle">
+            <Setter Property="BorderThickness" Value="4" />
+            <Setter Property="BorderBrush" Value="{StaticResource StrokeColour}"/>
+            <Setter Property="Background" Value="{StaticResource FillColour}"/>
+            <Setter Property="CornerRadius" Value="10"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="TextStyle">
+            <Setter Property="FontFamily" Value="Calibri"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="{StaticResource TextColour}"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="ButtonStyle">
+            <Setter Property="FontFamily" Value="Calibri"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="{StaticResource StrokeColour}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextColour}"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Style.Resources>
+        </Style>
     </Application.Resources>
 </Application>
